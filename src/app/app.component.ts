@@ -10,8 +10,10 @@ export class AppComponent {
   /*display the user name*/
   userName:string="";
   fontColor:string="";
+  visitorCount:number;
   constructor(){
     this.userName ="Madhavan"; //bring this up from the login screen/db
     this.fontColor="pink"; //db - theme set //style binding
+    this.visitorCount=100; //db - theme set //style binding
   }
 }
