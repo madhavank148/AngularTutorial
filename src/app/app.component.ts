@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FirstApp';
+  /*display the user name*/
+  userName:string="";
+  constructor(){
+    this.userName ="Madhavan"; //bring this up from the login screen/db
+  }
 }
