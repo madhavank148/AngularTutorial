@@ -4,7 +4,7 @@ import { SliderComponent } from './slider/slider.component';
 import { MovieShowsComponent } from './movie-shows/movie-shows.component';
 
 const routes: Routes = [
-  {path:"/home", component:SliderComponent}, 
+  {path:"home", component:SliderComponent}, 
    {path:"movies", component:MovieShowsComponent}];
 
 @NgModule({
