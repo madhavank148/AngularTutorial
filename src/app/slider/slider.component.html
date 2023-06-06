@@ -1,0 +1,13 @@
+<section>
+
+    <button (click)="previousMovie()" >&lt;</button><br>
+    
+    <img [src]="movieJSON[counter].posterurl" height="350px" width="600px"><br>
+    
+    Title : {{movieJSON[counter].title}} <br>
+    
+    Release Year:{{movieJSON[counter].year}} <br>
+    
+    <button (click)="nextMovie()">&gt;</button>
+    
+    </section>

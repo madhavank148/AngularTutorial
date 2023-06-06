@@ -4,11 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GenderPipe } from './gender.pipe';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GenderPipe
+    GenderPipe,
+    HeaderComponent,
+    FooterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
