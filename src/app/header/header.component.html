@@ -1,6 +1,19 @@
-<!-- <span class="alignTextRight">Welcome {{userName}}</span> -->
-<span class="alignTextRight" [style.color]="fontColor">Welcome {{userName|uppercase |gender:genderType}}</span><br>
-<span class="alignTextRight" [style.color]="fontColor">Today's Date : {{todayDate|date:'fullDate'|uppercase}}</span>
+<span class="alignTextRight" [style.color]="fontColor">Welcome {{userName|uppercase |gender:genderType }}</span>
+
 <br>
-<img src="../favicon.ico" alt="Logo" width="50px" height="50px">
+
+<span class="alignTextRight" [style.color]="fontColor">Today's Date: {{todayDate |date :'fullDate' |uppercase}}</span>
+
+<!--name|gender :genderType -->
+
+<br>
+
+<img src="../favicon.ico" height="50px" width="50px"/>
+
 <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Mickey Star</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a routerLink="/home">Home</a>&nbsp;&nbsp;
+
+<a routerLink="/movies">Movies</a>
