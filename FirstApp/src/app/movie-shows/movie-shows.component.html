@@ -1,6 +1,11 @@
-
-<br><br>
-<h1>Popular Movies</h1><br><section *ngFor="let d of movieData" style="display: inline-block">
+<br /><br />
+<h1>Popular Movies</h1>
+<br />
+<section
+  routerLink="/movies/{{ d.title }}"
+  *ngFor="let d of movieData"
+  style="display: inline-block"
+>
   <img [src]="d.posterurl" height="200px" width="100px" /><br />
   Title:{{ d.title }} <br />
   Release Date:{{ d.releaseDate }}
