@@ -1,3 +1,7 @@
-<div>Present Address: <input type="text" [(ngModel)]="address">
-Permanent Address:<input type="text" [value]="address"><br><br>
+<br><br><div>
+    <label for="checked">Present Address & Permanent Address Same</label>
+    <input type="checkbox" id="checked" name="checkbox" [(ngModel)]="isChecked">
+    <br>
+Present Address: <input type="text" [(ngModel)]="address"><br>
+Permanent Address:<input type="text" *ngIf="isChecked" [value]="address"><br><br>
 </div>

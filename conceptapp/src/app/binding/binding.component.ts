@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BindingComponent {
   address:any ="";
+  isChecked:boolean=false;
   constructor(){
     this.address="Hyderabad";
 
