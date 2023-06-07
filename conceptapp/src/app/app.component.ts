@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'conceptapp';
-  address:any ="";
-  constructor(){
-    this.address="Hyderabad";
-
-  }
+  
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import  data  from '../../assets/Movie.json';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -16,16 +16,19 @@ export class MovieDetailsComponent {
 
   selectedMovieData: any;
 
-  constructor(private objRoute: ActivatedRoute) {
+  constructor(
+    private objRoute: ActivatedRoute,
+    private objService: MovieService
+  ) {
     //dependency injection
-
-    this.movieData = data;
+    // this.movieData = data;//data from the service
+    this.movieData = objService.getMovieData();
   }
 
   ngOnInit() {
     //extract the parameter   //Rxjs - observables, observer, subscribe->notify, unsubsrcibe
 
-    console.log('ng on init fired');
+    // console.log('ng on init fired');
 
     this.objRoute.paramMap.subscribe((params) => {
       this.movieTitle = params.get('movieName');

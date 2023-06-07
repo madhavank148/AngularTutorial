@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import  data  from "../../assets/Movie.json";
+import { MovieService } from '../movie.service';
 @Component({
   selector: 'app-movie-shows',
   templateUrl: './movie-shows.component.html',
@@ -7,7 +7,8 @@ import  data  from "../../assets/Movie.json";
 })
 export class MovieShowsComponent {
   movieData:any[];
-constructor() { 
-    this.movieData = data;
-}
+  constructor(private objService:MovieService){
+    //this.movieData = data;//get the data from the service
+    this.movieData = objService.getMovieData();
+  }
 }
