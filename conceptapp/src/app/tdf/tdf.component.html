@@ -1,1 +1,35 @@
-<p>tdf works!</p>
+<form #regForm="ngForm" (ngSubmit)="receiveValues(regForm)">
+  Enter your Name:
+  <input type="text" name="txtName" #uName="ngModel" ngModel required />
+  <br /><br />
+
+  <div>
+    <span *ngIf="uName.touched && uName.invalid" style="color: red"
+      >User Name is mandatory. Please enter the user name</span
+    >
+  </div>
+
+  Enter your Age:
+  <input type="number" name="txtAge" #uAge="ngModel" ngModel /><br /><br />
+
+  Enter your emailID:<input type="email" name="txtEmail" #uEmail="ngModel" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required ngModel><br><br>
+
+  <span
+    *ngIf="(regForm.controls['txtEmail']?.errors?.['required']) &&(uEmail.touched) && (uEmail.invalid)"
+    style="color: red"
+  >
+    Email is mandatory</span
+  >
+
+  <span style="color:red" *ngIf="(regForm.controls['txtEmail']?.errors?.['pattern']) &&(uEmail.touched) && (uEmail.invalid)">Email ID is invalid</span>
+
+  <!-- <span style="color: red" *ngIf="uEmail.touched && uEmail.invalid">
+    Email is mandatory</span
+  >
+
+  <span style="color: red" *ngIf="uEmail.touched && uEmail.invalid"
+    >Email ID is invalid</span
+  > -->
+
+  <input type="submit" />
+</form>

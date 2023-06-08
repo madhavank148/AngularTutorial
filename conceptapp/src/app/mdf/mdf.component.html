@@ -1,1 +1,30 @@
-<p>mdf works!</p>
+<h1>Enter the following details to register</h1>
+
+<form [formGroup]="frmRegistration" (ngSubmit)="receiveValues()">
+  Enter your Name: <input type="text" formControlName="name" name="txtName" />
+  <div>
+    <span *ngIf="frmRegistration.controls['name']?.hasError('required')" style="color:red">User Name is mandatory. Please enter the user name</span>
+  </div>
+  <br /><br />
+  
+  Enter your Age:
+  <input
+    type="text"
+    formControlName="age"
+    name="txtAge"
+    maxlength="3"
+  /><br /><br />
+
+  Enter your emailID:<input
+    type="email"
+    name="txtEmail"
+    formControlName="email"
+  />
+  <div>
+    <span *ngIf="frmRegistration.controls['email']?.hasError('required')" style="color:red">Email is Required</span>
+    <span *ngIf="frmRegistration.controls['email']?.hasError('pattern')" style="color:red">Email is Invalid</span>
+  </div>
+  <br /><br />
+  <input type="submit" />
+</form>
+
