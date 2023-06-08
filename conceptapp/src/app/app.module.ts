@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { RESTAPIComponent } from './restapi/restapi.component';
 import { BindingComponent } from './binding/binding.component';
+import { TDFComponent } from './tdf/tdf.component';
+import { MDFComponent } from './mdf/mdf.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RESTAPIComponent,
-    BindingComponent
+    BindingComponent,
+    TDFComponent,
+    MDFComponent
   ],
   imports: [
     BrowserModule,
