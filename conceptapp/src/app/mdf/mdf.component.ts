@@ -14,7 +14,7 @@ export class MDFComponent {
   constructor(){
     this.frmRegistration = new FormGroup({
       name : new FormControl('',[Validators.required]), //required
-      age:new FormControl('',Validators.minLength(1)), //minimum length
+      age:new FormControl('',[Validators.minLength(1)]), //minimum length
       email: new FormControl('',[Validators.required,Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}")]) //required, pattern
     })
   }

@@ -5,7 +5,7 @@
   <div>
     <span *ngIf="frmRegistration.controls['name']?.hasError('required')" style="color:red">User Name is mandatory. Please enter the user name</span>
   </div>
-  <br /><br />
+  <br />
   
   Enter your Age:
   <input
@@ -13,7 +13,10 @@
     formControlName="age"
     name="txtAge"
     maxlength="3"
-  /><br /><br />
+  />
+  <div>
+    <span *ngIf="frmRegistration.controls['age']?.hasError('minLength')" style="color:red">Minimum Length should be 1</span>
+  </div><br /><br />
 
   Enter your emailID:<input
     type="email"
